@@ -14,6 +14,10 @@ const App = {
       { id: 'base64-hex', name: 'Base64 / Hex Encoder', category: 'Encoding', desc: 'Safe in-browser encode/decode' },
       { id: 'headers-check', name: 'Headers Analyzer', category: 'Recon', desc: 'Check CORS, CSP, HSTS flags' },
       { id: 'jwt-debug', name: 'JWT Token Debugger', category: 'Web Sec', desc: 'Decode, validate, highlight claims' }
+      
+  // ... existing tools ...
+  { id: 'calc', name: 'Scientific Calculator', category: 'Utility', desc: 'Casio CW-991 style with memory & history' },
+  { id: 'cve-lookup', name: 'CVE / MITRE Lookup', category: 'Recon', desc: 'Search vulnerabilities & attack frameworks' },
     ];
   },
   renderToolsGrid() {
