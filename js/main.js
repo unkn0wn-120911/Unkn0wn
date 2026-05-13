@@ -24,3 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   UIEffects.typeWriter(document.querySelector('.site-name'), 'UNKN0WN', 80);
   setTimeout(() => UIEffects.typeWriter(document.querySelector('.tagline'), 'FUcKeR', 60), 1000);
 });
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('✅ PWA Ready'))
+    .catch(err => console.log('❌ SW Error:', err));
+}
