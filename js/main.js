@@ -5,10 +5,11 @@ const toolsUI = {
     document.getElementById('tool-title').textContent = tool.name;
     const container = document.getElementById('tool-container');
     container.innerHTML = '';
-    
-    if (id === 'hash-gen') hashGenerator.render(container);
-    else container.innerHTML = `<p class="terminal-output">🔧 Module "${id}" loading... (Coming Soon)</p>`;
-    
+    if (id==='hash-gen') hashGenerator.render(container);
+    else if (id==='base64-hex') base64HexTool.render(container);
+    else if (id==='headers-check') headersChecker.render(container);
+    else if (id==='jwt-debug') jwtDebugger.render(container);
+    else container.innerHTML = `<p class="terminal-output">🔧 Module "${id}" loading...</p>`;
     document.getElementById('tool-workspace').classList.remove('hidden');
     document.getElementById('tools-grid').classList.add('hidden');
   },
@@ -18,4 +19,8 @@ const toolsUI = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => App.init());
+document.addEventListener('DOMContentLoaded', () => {
+  App.init();
+  UIEffects.typeWriter(document.querySelector('.site-name'), 'UNKN0WN', 80);
+  setTimeout(() => UIEffects.typeWriter(document.querySelector('.tagline'), 'FUcKeR', 60), 1000);
+});
