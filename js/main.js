@@ -9,6 +9,8 @@ const toolsUI = {
     else if (id==='base64-hex') base64HexTool.render(container);
     else if (id==='headers-check') headersChecker.render(container);
     else if (id==='jwt-debug') jwtDebugger.render(container);
+    else if (id==='calc') scientificCalculator.render(container);
+    else if (id==='cve-lookup') cveLookup.render(container);
     else container.innerHTML = `<p class="terminal-output">🔧 Module "${id}" loading...</p>`;
     document.getElementById('tool-workspace').classList.remove('hidden');
     document.getElementById('tools-grid').classList.add('hidden');
